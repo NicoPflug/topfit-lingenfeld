@@ -3,38 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Top Fit Studio Lingenfeld</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>TopFit Lingenfeld</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A',
+            secondary: '#EFF6FF'
+          }
+        }
+      }
+    };
+  </script>
 </head>
-<body>
-  <header>
-    <div class="logo">Top Fit Lingenfeld</div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Start</a></li>
-        <li><a href="ueber-uns.html">Über uns</a></li>
-        <li><a href="angebot.html">Angebot</a></li>
-        <li><a href="mitgliedschaften.html">Mitgliedschaften</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </nav>
+<body class="bg-white text-gray-900">
+  <!-- Header -->
+  <header class="bg-primary text-white">
+    <div class="container mx-auto flex justify-between items-center px-4 py-4">
+      <h1 class="text-2xl font-bold">TopFit Lingenfeld</h1>
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <nav id="menu" class="hidden md:flex space-x-4">
+        <a href="#kurse" class="hover:underline">Kurse</a>
+        <a href="#studio" class="hover:underline">Studio</a>
+        <a href="#kontakt" class="hover:underline">Kontakt</a>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="#kurse" class="block py-1">Kurse</a>
+      <a href="#studio" class="block py-1">Studio</a>
+      <a href="#kontakt" class="block py-1">Kontakt</a>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Herzlich willkommen im Top Fit Studio Lingenfeld!</h1>
-      <p>Dein Fitnessstudio in der Südpfalz – Training, Wellness und mehr.</p>
-      <a href="kontakt.html" class="btn">Jetzt Probetraining buchen</a>
-    </section>
+  <!-- Hero -->
+  <section class="bg-secondary text-center py-20">
+    <h2 class="text-4xl font-bold text-primary mb-4">Willkommen bei TopFit Lingenfeld</h2>
+    <p class="text-lg text-gray-700 mb-6">Fitness. Gesundheit. Gemeinschaft.</p>
+    <a href="#kontakt" class="bg-primary text-white px-6 py-3 rounded-lg shadow hover:bg-blue-900">Jetzt Kontakt aufnehmen</a>
+  </section>
 
-    <section class="intro">
-      <h2>Was dich bei uns erwartet</h2>
-      <p>Modernstes Equipment, motivierende Kurse, erstklassiger Wellnessbereich und persönliche Betreuung – alles unter einem Dach!</p>
-    </section>
-  </main>
+  <!-- Kurse -->
+  <section id="kurse" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center text-primary mb-10">Unsere Kurse</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="border p-6 rounded-xl shadow text-center">
+          <h4 class="text-xl font-semibold text-primary mb-2">Yoga</h4>
+          <p>Entspannung und Beweglichkeit für Körper und Geist.</p>
+        </div>
+        <div class="border p-6 rounded-xl shadow text-center">
+          <h4 class="text-xl font-semibold text-primary mb-2">Krafttraining</h4>
+          <p>Für mehr Muskelkraft und Ausdauer.</p>
+        </div>
+        <div class="border p-6 rounded-xl shadow text-center">
+          <h4 class="text-xl font-semibold text-primary mb-2">Zumba</h4>
+          <p>Tanzen und Kalorien verbrennen mit Spaß!</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Top Fit Studio Lingenfeld • Im Oberwald 8 • 67360 Lingenfeld</p>
+  <!-- Galerie -->
+  <section class="bg-secondary py-16">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center text-primary mb-10">Impressionen</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="https://via.placeholder.com/300x200" alt="Galeriebild" class="rounded-lg shadow" />
+        <img src="https://via.placeholder.com/300x200" alt="Galeriebild" class="rounded-lg shadow" />
+        <img src="https://via.placeholder.com/300x200" alt="Galeriebild" class="rounded-lg shadow" />
+        <img src="https://via.placeholder.com/300x200" alt="Galeriebild" class="rounded-lg shadow" />
+        <img src="https://via.placeholder.com/300x200" alt="Galeriebild" class="rounded-lg shadow" />
+        <img src="https://via.placeholder.com/300x200" alt="Galeriebild" class="rounded-lg shadow" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Studio -->
+  <section id="studio" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center text-primary mb-8">Unser Studio</h3>
+      <p class="max-w-3xl mx-auto text-center text-gray-700">
+        Modern ausgestattetes Fitnessstudio mit persönlicher Betreuung in angenehmer Atmosphäre.
+        Wir bieten flexible Trainingsmöglichkeiten, großzügige Räume und moderne Geräte.
+      </p>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" class="py-16 bg-secondary">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center text-primary mb-8">Kontakt & Öffnungszeiten</h3>
+      <div class="max-w-xl mx-auto text-center">
+        <p class="mb-2">📍 Musterstraße 1, 67360 Lingenfeld</p>
+        <p class="mb-2">📞 0123 456789</p>
+        <p class="mb-4">📧 info@topfit-lingenfeld.de</p>
+        <p><strong>Öffnungszeiten:</strong><br>Mo–Fr: 08:00–22:00<br>Sa–So: 10:00–18:00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-4">
+    <p>&copy; 2025 TopFit Lingenfeld – Alle Rechte vorbehalten.</p>
   </footer>
+
+  <!-- JavaScript: Menü-Toggle -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
